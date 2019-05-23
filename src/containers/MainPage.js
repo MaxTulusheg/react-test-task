@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import MainPage from '../components/MainPage';
 import { getContacts, getPaging } from '../selectors';
 import { bindActionCreators } from 'redux';
-import { goToPage } from '../actions';
+import { fetchContacts, fetchHistory, openDropdown } from '../actions';
 
 const mapStateToProps = state => ({
   contacts: getContacts(state),
@@ -10,7 +10,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  goToPage: bindActionCreators(goToPage, dispatch)
+  fetchContacts: bindActionCreators(fetchContacts, dispatch),
+  showContactHistory: bindActionCreators(fetchHistory, dispatch),
+  openDropdown: bindActionCreators(openDropdown, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage);

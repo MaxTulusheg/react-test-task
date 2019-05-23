@@ -1,25 +1,45 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Toolbar = () => (
-	<div className="card">
-		<div className="card-body">
-			<form className="form-inline">
-				<div className="col">
-					<div className="input-group mb-3">
-						<input type="text" className="form-control" placeholder="Search..." />
-						<div className="input-group-append">
-							<button className="btn btn-outline-secondary" type="button">Search</button>
-						</div>
-					</div>
-				</div>
-				<div className="col-1">
-					<div className="input-group mb-3">
-						<button className="form-control btn btn-primary">+</button>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
-);
+
+const Toolbar = (props) => {
+  const goToCreationPage = () => props.history.push('/new');
+  const searchField = React.createRef();
+  const submitContactSearch = (event) => {
+    event.preventDefault();
+    const query = searchField.current.value;
+
+    props.searchContacts(query);
+  }
+
+  return (
+    <div className="card">
+      <div className="card-body">
+        <div className="row">
+          <form className="form col" onSubmit={submitContactSearch}>
+            <div className="input-group">
+              <input ref={searchField} type="text" className="form-control" placeholder="Search..." />
+              <div className="input-group-append">
+                <button className="btn btn-outline-secondary">Search</button>
+              </div>
+            </div>
+          </form>
+          <div className="col-1">
+            <div className="input-group">
+              <button onClick={goToCreationPage} className="form-control btn btn-primary">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+Toolbar.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired,
+  searchContacts: PropTypes.func.isRequired
+}
 
 export default Toolbar;

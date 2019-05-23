@@ -1,29 +1,22 @@
 import * as types from '../constants/ActionTypes';
 
 const defaultState = {
-  contacts: [{
-    id: 'some-id-1',
-    username: 'UserName',
-    phone: '0979879876'
-  }, {
-    id: 'some-id-2',
-    username: 'UserName 2',
-    phone: '0979879877'
-  }],
+  contacts: [],
   pagination: {
     page: 1,
-    totalPages: 5
+    totalPages: 1
   }
 };
 
 export default (state = defaultState, { type, payload }) => {
   switch (type) {
-    case types.GO_TO_PAGE:
+    case types.GET_CONTACTS_SUCCESS:
       return {
         ...state,
+        contacts: payload.contacts,
         pagination: {
-          ...state.pagination,
-          page: payload
+          page: payload.page,
+          totalPages: Math.ceil(payload.totalItems / 5)
         }
       };
     default:
