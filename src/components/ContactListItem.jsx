@@ -38,11 +38,12 @@ const ContactListItem = ({ id, name, phone, showContactHistory, openDropdown, op
         y: event.pageY
       }
     });
-  }
+  };
 
 
   return (
-    <li className="list-group-item list-group-item-action" onContextMenu={onOpenDropdown} onClick={() => showContactHistory(id)}>
+    <li className="list-group-item list-group-item-action" onContextMenu={onOpenDropdown}
+        onClick={() => showContactHistory(id)}>
       <div className="d-flex w-100 justify-content-between">
         <h5 className="mb-1">
           {name}
@@ -53,7 +54,7 @@ const ContactListItem = ({ id, name, phone, showContactHistory, openDropdown, op
       </small>
     </li>
   );
-}
+};
 
 ContactListItem.propTypes = {
   id: PropTypes.string.isRequired,

@@ -27,7 +27,7 @@ export default (state = defaultState, { type, payload }) => {
           isOpen: true,
           title: payload.title,
           content: payload.content,
-          actions: payload.actions,
+          actions: payload.actions
         }
       };
     case types.CLOSE_MODAL:

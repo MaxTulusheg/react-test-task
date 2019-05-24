@@ -40,5 +40,5 @@ export const deleteContact = id => api.delete(`/contacts/${id}`);
 // Solution for json server
 export const deleteHistory = contactId => api.get(`/history?contact_id_like=${contactId}`)
   .then(res => api.delete(`/history/${res.data[0].id}`));
-  
+
 export const updateContact = (id, contactInfo) => api.put(`/contacts/${id}`, contactInfo);

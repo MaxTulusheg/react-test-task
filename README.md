@@ -1,3 +1,11 @@
+# Runing instructions
+
+ - Install dependencies `yarn`
+
+ - Run server `yarn run server`
+
+ - Run app `yarn start`
+
 # Front-end Test Task
 
 

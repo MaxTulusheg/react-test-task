@@ -12,15 +12,15 @@ const MainPage = ({ contacts, pagination, fetchContacts, showContactHistory, ope
 
   return (
     <>
-    <div className="row mt-5">
-      <div className="col">
-        <Toolbar />
+      <div className="row mt-5">
+        <div className="col">
+          <Toolbar/>
+        </div>
       </div>
-    </div>
-    <div className="row mt-2 mb-3">
-      <div className="col">
-        {contacts && contacts.length
-          ? <ContactList
+      <div className="row mt-2 mb-3">
+        <div className="col">
+          {contacts && contacts.length
+            ? <ContactList
               contacts={contacts}
               showContactHistory={showContactHistory}
               openDropdown={openDropdown}
@@ -28,22 +28,22 @@ const MainPage = ({ contacts, pagination, fetchContacts, showContactHistory, ope
               removeContact={removeContact}
               history={history}
             />
-          : <h4 className="text-center">No Data</h4>
-        }
+            : <h4 className="text-center">No Data</h4>
+          }
+        </div>
+        <div className="col-4">
+          <ContactHistory/>
+        </div>
       </div>
-      <div className="col-4">
-        <ContactHistory />
+      <div className="row">
+        <div className="col">
+          {pagination && pagination.totalPages > 1
+          && <Pagination {...pagination} goToPage={fetchContacts}/>}
+        </div>
       </div>
-    </div>
-    <div className="row">
-      <div className="col">
-        {pagination && pagination.totalPages > 1
-          && <Pagination {...pagination} goToPage={fetchContacts} />}
-      </div>
-    </div>
     </>
   );
-}
+};
 
 MainPage.propTypes = {
   contacts: PropTypes.array.isRequired,

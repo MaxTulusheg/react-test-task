@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 
-const ContactEditor = ({contact, match, history, openModal, getContactInfo, clearContactInfo, changeName, changePhone, createNewContact, editContact}) => {
+const ContactEditor = ({ contact, match, history, openModal, getContactInfo, clearContactInfo, changeName, changePhone, createNewContact, editContact }) => {
   const id = match.params.id;
 
   useEffect(() => {

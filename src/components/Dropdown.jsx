@@ -15,14 +15,14 @@ const Dropdown = ({ isOpen, options, coords, closeDropdown }) => {
       `;
       document.onclick = () => {
         document.onclick = null;
-    
+
         closeDropdown();
       };
     }
   });
-  
+
   return (
-    <div ref={dropdownMenu} className={`dropdown-menu ${isOpen ? 'show' : ''}`} style={{top: 0, left: 0}}>
+    <div ref={dropdownMenu} className={`dropdown-menu ${isOpen ? 'show' : ''}`} style={{ top: 0, left: 0 }}>
       {options.map(item => (
         <button key={item.text} onClick={item.callback} className="dropdown-item" type="button">{item.text}</button>
       ))}
