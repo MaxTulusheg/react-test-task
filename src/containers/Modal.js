@@ -1,15 +1,16 @@
 import { connect } from 'react-redux';
 import { getModalInfo } from '../selectors';
 import { bindActionCreators } from 'redux';
-import { fetchContacts } from '../actions';
+import { fetchContacts, closeModal } from '../actions';
 import Modal from '../components/Modal';
 
 const mapStateToProps = state => ({
-  isOpen: getModalInfo(state).isOpen
+  ...getModalInfo(state)
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchContacts: bindActionCreators(fetchContacts, dispatch)
+  fetchContacts: bindActionCreators(fetchContacts, dispatch),
+  closeModal: bindActionCreators(closeModal, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Modal);

@@ -5,7 +5,7 @@ import Pagination from './Pagination';
 import PropTypes from 'prop-types';
 import ContactHistory from '../containers/ContactHistory';
 
-const MainPage = ({ contacts, pagination, fetchContacts, showContactHistory, openDropdown, history }) => {
+const MainPage = ({ contacts, pagination, fetchContacts, showContactHistory, openDropdown, openModal, removeContact, history }) => {
   useEffect(() => {
     fetchContacts();
   }, [fetchContacts]);
@@ -24,9 +24,11 @@ const MainPage = ({ contacts, pagination, fetchContacts, showContactHistory, ope
               contacts={contacts}
               showContactHistory={showContactHistory}
               openDropdown={openDropdown}
+              openModal={openModal}
+              removeContact={removeContact}
               history={history}
             />
-          : 'No Data'
+          : <h4 className="text-center">No Data</h4>
         }
       </div>
       <div className="col-4">
@@ -50,7 +52,10 @@ MainPage.propTypes = {
   }).isRequired,
   fetchContacts: PropTypes.func.isRequired,
   showContactHistory: PropTypes.func.isRequired,
-  openDropdown: PropTypes.func.isRequired
+  openDropdown: PropTypes.func.isRequired,
+  openModal: PropTypes.func.isRequired,
+  removeContact: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired
 };
 
 export default MainPage;

@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const Toolbar = (props) => {
-  const goToCreationPage = () => props.history.push('/new');
+const Toolbar = ({ history, searchContacts }) => {
+  const goToCreationPage = () => history.push('/new');
   const searchField = React.createRef();
   const submitContactSearch = (event) => {
     event.preventDefault();
     const query = searchField.current.value;
 
-    props.searchContacts(query);
+    searchContacts(query);
   }
 
   return (

@@ -1,7 +1,7 @@
 import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Toolbar from "../components/Toolbar";
+import Toolbar from '../components/Toolbar';
 import { searchContacts } from '../actions';
 
 const mapDispatchToProps = dispatch => ({

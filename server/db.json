@@ -1,9 +1,9 @@
 {
   "contacts": [
     {
-      "id": "5ce64b444b49c9fd3e486ce8",
       "name": "Cassie Brock",
-      "phone": "+1 (925) 500-2958"
+      "phone": "+1 (925) 500-2958",
+      "id": "5ce64b444b49c9fd3e486ce8"
     },
     {
       "id": "5ce64b4471b66384f21f3f26",
@@ -86,29 +86,10 @@
         {
           "incoming": false,
           "date": "Thu May 23 2019 10:31:56 GMT+0300 (Eastern European Summer Time)"
-        },
-        {
-          "date": "2019-05-23T13:17:56.042Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:41:36.395Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:43:54.241Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:43:55.257Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:43:55.953Z",
-          "incoming": false
         }
       ],
-      "id": "5ce64b444b49c9fd3e486ce8"
+      "id": "5ce64b444b49c9fd3e486ce8",
+      "contact_id": "5ce64b444b49c9fd3e486ce8"
     },
     {
       "calls": [
@@ -117,31 +98,12 @@
           "date": "Wed Oct 27 2004 03:21:23 GMT+0300 (Eastern European Summer Time)"
         },
         {
-          "incoming": false,
-          "date": "Thu May 23 2019 10:31:56 GMT+0300 (Eastern European Summer Time)"
-        },
-        {
-          "incoming": false,
-          "date": "Thu May 23 2019 10:37:56 GMT+0300 (Eastern European Summer Time)"
-        },
-        {
-          "incoming": true,
-          "date": "Thu May 23 2019 18:31:56 GMT+0300 (Eastern European Summer Time)"
-        },
-        {
-          "date": "2019-05-23T13:59:05.883Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:59:12.923Z",
-          "incoming": false
-        },
-        {
           "date": "2019-05-23T13:59:16.451Z",
-          "incoming": false
+          "incoming": true
         }
       ],
-      "id": "5ce64b446bc58fc8cbee9529"
+      "id": "5ce64b446bc58fc8cbee9529",
+      "contact_id": "5ce64b446bc58fc8cbee9529"
     },
     {
       "calls": [
@@ -151,26 +113,11 @@
         },
         {
           "date": "2019-05-23T13:17:03.378Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:17:54.106Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:43:58.249Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T15:38:48.496Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T15:38:51.392Z",
-          "incoming": false
+          "incoming": true
         }
       ],
-      "id": "5ce64b4471b66384f21f3f26"
+      "id": "5ce64b4471b66384f21f3f26",
+      "contact_id": "5ce64b4471b66384f21f3f26"
     },
     {
       "calls": [
@@ -179,7 +126,8 @@
           "incoming": false
         }
       ],
-      "id": "5ce64b447333efe8ac2f89ee"
+      "id": "5ce64b447333efe8ac2f89ee",
+      "contact_id": "5ce64b447333efe8ac2f89ee"
     },
     {
       "calls": [
@@ -192,7 +140,8 @@
           "incoming": false
         }
       ],
-      "id": "5ce64b44c94deeec8a4f983b"
+      "id": "5ce64b44c94deeec8a4f983b",
+      "contact_id": "5ce64b44c94deeec8a4f983b"
     },
     {
       "calls": [
@@ -214,53 +163,10 @@
         },
         {
           "date": "2019-05-23T13:18:01.746Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:18:02.673Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:18:03.465Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:18:05.305Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:18:06.074Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:27:28.492Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:27:29.188Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:27:29.796Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:27:30.355Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:27:30.971Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:27:31.572Z",
-          "incoming": false
-        },
-        {
-          "date": "2019-05-23T13:27:32.195Z",
-          "incoming": false
+          "incoming": true
         }
       ],
+      "contact_id": "5ce64b4468166a2fb709d7ae",
       "id": "5ce64b4468166a2fb709d7ae"
     },
     {
@@ -270,10 +176,12 @@
           "incoming": false
         }
       ],
-      "id": "5ce64b441e1b51be03c92231"
+      "id": "5ce64b441e1b51be03c92231",
+      "contact_id": "5ce64b441e1b51be03c92231"
     },
     {
       "id": "5ce64b4477ca1713238fefdc",
+      "contact_id": "5ce64b4477ca1713238fefdc",
       "calls": []
     },
     {
@@ -283,10 +191,12 @@
           "incoming": false
         }
       ],
-      "id": "5ce64b44a75a762423b4c492"
+      "id": "5ce64b44a75a762423b4c492",
+      "contact_id": "5ce64b44a75a762423b4c492"
     },
     {
       "id": "5ce64b44c4684eeabd16ce81",
+      "contact_id": "5ce64b44c4684eeabd16ce81",
       "calls": []
     },
     {
@@ -296,22 +206,27 @@
           "incoming": false
         }
       ],
-      "id": "5ce64b44155f844bea16fbaf"
+      "id": "5ce64b44155f844bea16fbaf",
+      "contact_id": "5ce64b44155f844bea16fbaf"
     },
     {
       "id": "5ce64b4412be09ca2b6a1770",
+      "contact_id": "5ce64b4412be09ca2b6a1770",
       "calls": []
     },
     {
       "id": "5ce64b44824097429ff2c0ed",
+      "contact_id": "5ce64b44824097429ff2c0ed",
       "calls": []
     },
     {
       "id": "5ce64b4445d2b650566c23d6",
+      "contact_id": "5ce64b4445d2b650566c23d6",
       "calls": []
     },
     {
       "id": "5ce64b4402802f77a689afd1",
+      "contact_id": "5ce64b4402802f77a689afd1",
       "calls": []
     }
   ]

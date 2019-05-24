@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 
 const Dropdown = ({ isOpen, options, coords, closeDropdown }) => {
   const dropdownMenu = React.createRef();
@@ -20,12 +22,22 @@ const Dropdown = ({ isOpen, options, coords, closeDropdown }) => {
   });
   
   return (
-    <div ref={dropdownMenu} className={`dropdown-menu ${isOpen ? 'show' : ''}`}>
+    <div ref={dropdownMenu} className={`dropdown-menu ${isOpen ? 'show' : ''}`} style={{top: 0, left: 0}}>
       {options.map(item => (
         <button key={item.text} onClick={item.callback} className="dropdown-item" type="button">{item.text}</button>
       ))}
     </div>
   );
+};
+
+Dropdown.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  options: PropTypes.array.isRequired,
+  coords: PropTypes.shape({
+    x: PropTypes.number.isRequired,
+    y: PropTypes.number.isRequired
+  }).isRequired,
+  closeDropdown: PropTypes.func.isRequired
 };
 
 export default Dropdown;

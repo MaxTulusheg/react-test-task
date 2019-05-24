@@ -8,14 +8,14 @@ import ContactEditor from '../containers/ContactEditor';
 
 export default () => (
   <>
-  <div className="container">
-    <Switch>
-      <Route exact path='/' component={MainPage}/>
-      <Route path='/new' component={props => <ContactEditor isNew={true} {...props} />}/>
-      <Route path='/edit/:id' component={props => <ContactEditor {...props} />}/>
-    </Switch>
-  </div>
-  <Modal />
-  <Dropdown />
+    <div className="container">
+      <Switch>
+        <Route exact path='/' component={MainPage}/>
+        <Route path='/new' component={ContactEditor}/>
+        <Route path='/edit/:id' component={ContactEditor}/>
+      </Switch>
+    </div>
+    <Modal/>
+    <Dropdown/>
   </>
 );

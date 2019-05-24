@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 import ContactHistory from '../components/ContactHistory';
-import { getChosenContactId, getCallHistory } from '../selectors';
+import { getChosenContactId, getCallHistory, getHistoryId } from '../selectors';
 import { bindActionCreators } from 'redux';
 import { makeCall } from '../actions';
 
 const mapStateToProps = state => ({
-  id: getChosenContactId(state),
+  id: getHistoryId(state),
+  contact_id: getChosenContactId(state),
   calls: getCallHistory(state)
 });
 

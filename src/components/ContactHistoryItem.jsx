@@ -15,6 +15,6 @@ const ContactHistoryItem = ({ date, incoming }) => (
 ContactHistoryItem.propTypes = {
   date: PropTypes.string.isRequired,
   incoming: PropTypes.bool.isRequired
-}
+};
 
 export default ContactHistoryItem;

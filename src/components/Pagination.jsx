@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 const Pagination = ({ page, totalPages, goToPage }) => {
   const pages = [];
 
-  // TODO: improve this
   for (let i = 1; i <= totalPages; i++) {
     pages.push(
       <li key={i} className={`page-item ${i === page ? 'active' : ''}`}>

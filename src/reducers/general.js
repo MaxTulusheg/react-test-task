@@ -2,7 +2,10 @@ import * as types from '../constants/ActionTypes';
 
 const defaultState = {
   modal: {
-    isOpen: false
+    isOpen: false,
+    title: '',
+    content: '',
+    actions: []
   },
   dropdown: {
     isOpen: false,
@@ -21,7 +24,10 @@ export default (state = defaultState, { type, payload }) => {
         ...state,
         modal: {
           ...state.modal,
-          isOpen: true
+          isOpen: true,
+          title: payload.title,
+          content: payload.content,
+          actions: payload.actions,
         }
       };
     case types.CLOSE_MODAL:
